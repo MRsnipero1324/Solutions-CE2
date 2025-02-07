@@ -1,0 +1,10 @@
+# Dockerfile para Rust
+FROM rust:1.73
+
+WORKDIR /app
+
+COPY script.rs /app/
+
+RUN rustc script.rs -o script
+
+CMD ["./script"]
