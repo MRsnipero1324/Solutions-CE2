@@ -17,17 +17,17 @@ El código de cada lenguaje se encuentra en su respectiva carpeta:
 
 ```
 ├── python/
-│   ├── matrix_mult.py
+│   ├── Script.py
 ├── java/
-│   ├── MatrixMultiplication.java
+│   ├── Script.java
 ├── cpp/
-│   ├── matrix_mult.cpp
+│   ├── Script.cpp
 ├── javascript/
-│   ├── matrix_mult.js
+│   ├── Script.js
 ├── go/
-│   ├── matrix_mult.go
+│   ├── Script.go
 ├── rust/
-│   ├── matrix_mult.rs
+│   ├── Script.rs
 ├── Dockerfiles/
 │   ├── Dockerfile.python
 │   ├── Dockerfile.java
