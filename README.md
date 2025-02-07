@@ -85,10 +85,3 @@ docker run --rm matrix_rust
   git clone https://github.com/tu-usuario/multiplicacion-matrices.git
   cd multiplicacion-matrices
   ```
-
-## Contribuciones
-Si deseas contribuir, envía un Pull Request o abre un Issue con sugerencias o mejoras.
-
-## Licencia
-Este proyecto está bajo la licencia MIT.
-
