@@ -3,7 +3,7 @@ FROM rust:1.73
 
 WORKDIR /app
 
-COPY script.rs /app/
+COPY ../Rust/Script.rs /app/
 
 RUN rustc script.rs -o script
 

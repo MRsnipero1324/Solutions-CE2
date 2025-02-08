@@ -3,7 +3,7 @@ FROM golang:1.20
 
 WORKDIR /app
 
-COPY script.go /app/
+COPY ../Go/Script.go /app/
 
 RUN go build -o script script.go
 

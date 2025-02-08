@@ -3,7 +3,7 @@ FROM openjdk:17-slim
 
 WORKDIR /app
 
-COPY script.java /app/
+COPY ../Java/Script.java /app/
 
 RUN javac script.java
 

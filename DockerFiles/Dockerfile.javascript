@@ -3,6 +3,6 @@ FROM node:20-slim
 
 WORKDIR /app
 
-COPY script.js /app/
+COPY ../JavaScript/Script.js /app/
 
 CMD ["node", "script.js"]

@@ -3,7 +3,7 @@ FROM gcc:12
 
 WORKDIR /app
 
-COPY script.cpp /app/
+COPY ../Cpp/Script.cpp /app/
 
 RUN g++ script.cpp -o script
 
