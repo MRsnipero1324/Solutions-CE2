@@ -3,7 +3,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Random;
 
-public class MatrixMultiplication {
+public class Script {
     public static int[][] multiplyMatrices(int[][] A, int[][] B) {
         int rowsA = A.length, colsA = A[0].length;
         int rowsB = B.length, colsB = B[0].length;
