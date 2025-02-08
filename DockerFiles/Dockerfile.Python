@@ -5,4 +5,4 @@ WORKDIR /app
 
 COPY ../Python/Script.py /app/
 
-CMD ["python", "script.py"]
+CMD ["python", "Script.py"]

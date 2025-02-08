@@ -5,6 +5,6 @@ WORKDIR /app
 
 COPY ../Cpp/Script.cpp /app/
 
-RUN g++ script.cpp -o script
+RUN g++ Script.cpp -o Script
 
-CMD ["./script"]
+CMD ["./Script"]

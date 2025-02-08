@@ -5,6 +5,6 @@ WORKDIR /app
 
 COPY ../Rust/Script.rs /app/
 
-RUN rustc script.rs -o script
+RUN rustc Script.rs -o Script
 
-CMD ["./script"]
+CMD ["./Script"]

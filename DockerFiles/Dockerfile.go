@@ -5,6 +5,6 @@ WORKDIR /app
 
 COPY ../Go/Script.go /app/
 
-RUN go build -o script script.go
+RUN go build -o Script Script.go
 
-CMD ["./script"]
+CMD ["./Script"]

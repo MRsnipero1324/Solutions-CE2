@@ -5,6 +5,6 @@ WORKDIR /app
 
 COPY ../Java/Script.java /app/
 
-RUN javac script.java
+RUN javac Script.java
 
-CMD ["java", "script"]
+CMD ["java", "Script"]

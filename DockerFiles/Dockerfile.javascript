@@ -5,4 +5,4 @@ WORKDIR /app
 
 COPY ../JavaScript/Script.js /app/
 
-CMD ["node", "script.js"]
+CMD ["node", "Script.js"]
