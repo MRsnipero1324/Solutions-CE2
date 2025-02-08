@@ -43,32 +43,32 @@ El código de cada lenguaje se encuentra en su respectiva carpeta:
 
 Para cada lenguaje hay un `Dockerfile` en la carpeta `DockerFiles/`. Sigue los siguientes pasos para ejecutar cada versión en su propio contenedor.
 
-### Python
+### Python(Ready)
 ```bash
 docker build -t matrix_python -f DockerFiles/Dockerfile.Python .
 docker run --rm -v $(pwd):/output matrix_python
 
 ```
 
-### Java
+### Java (Aun no funciona)
 ```bash
 docker build -t matrix_java -f DockerFiles/Dockerfile.Java .
 docker run --rm -v $(pwd):/output matrix_java
 ```
 
-### C++
+### C++ (Ready)
 ```bash
 docker build -t matrix_cpp -f DockerFiles/Dockerfile.cpp .
-docker run --rm -v $(pwd):/output matrix_cpp
+docker run --rm -v $(pwd):/app/output matrix_cpp
 ```
 
-### JavaScript (Node.js)
+### JavaScript (Node.js) (Ready)
 ```bash
 docker build -t matrix_js -f DockerFiles/Dockerfile.javascript .
 docker run --rm -v $(pwd):/output matrix_js
 ```
 
-### Go
+### Go (Ready)
 ```bash
 docker build -t matrix_go -f DockerFiles/Dockerfile.go .
 docker run --rm -v $(pwd):/output matrix_go

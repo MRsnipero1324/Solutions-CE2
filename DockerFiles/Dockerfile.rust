@@ -1,10 +1,26 @@
-# Dockerfile para Rust
-FROM rust:1.72-alpine
+# Base de Rust con cargo
+FROM rust:latest
 
+# Crear directorio de trabajo
 WORKDIR /app
 
-COPY ../Rust/Script.rs /app/
+# Copiar el archivo fuente
+COPY ./Rust/Script.rs .
 
-RUN rustc Script.rs -o Script
+# Inicializar proyecto Cargo para gestionar dependencias
+RUN cargo init --bin
 
-CMD ["./Script"]
+# Copiar el código fuente a main.rs
+RUN mv Script.rs src/main.rs
+
+# Declarar la dependencia `rand` en Cargo.toml
+RUN echo 'rand = "0.8"' >> Cargo.toml
+
+# Crear carpeta output para almacenar resultados
+RUN mkdir -p output
+
+# Compilar el programa
+RUN cargo build --release
+
+# Ejecutar el programa
+CMD ["./target/release/app"]
