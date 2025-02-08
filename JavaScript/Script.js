@@ -1,3 +1,6 @@
+const fs = require("fs");
+const path = require("path");
+
 function multiplyMatrices(A, B) {
     let rowsA = A.length, colsA = A[0].length;
     let rowsB = B.length, colsB = B[0].length;
@@ -21,4 +24,18 @@ function multiplyMatrices(A, B) {
 // Prueba con matrices 100x100
 let A = Array.from({ length: 100 }, () => Array.from({ length: 100 }, () => Math.floor(Math.random() * 10) + 1));
 let B = Array.from({ length: 100 }, () => Array.from({ length: 100 }, () => Math.floor(Math.random() * 10) + 1));
+
+// Medir tiempo de ejecución
+const startTime = Date.now();
 let result = multiplyMatrices(A, B);
+const endTime = Date.now();
+const executionTime = endTime - startTime; // Tiempo en milisegundos
+
+// Crear carpeta /output y escribir el archivo execution_time.txt
+const outputDir = "/output";
+if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir, { recursive: true });
+}
+
+const outputFile = path.join(outputDir, "execution_time_js.txt");
+fs.writeFileSync(outputFile, `Tiempo de ejecución: ${executionTime} ms\n`, "utf8");

@@ -1,4 +1,6 @@
 use rand::Rng;
+use std::fs;
+use std::time::Instant;
 
 fn multiply_matrices(A: &Vec<Vec<i32>>, B: &Vec<Vec<i32>>) -> Result<Vec<Vec<i32>>, &'static str> {
     let rows_a = A.len();
@@ -28,5 +30,17 @@ fn main() {
     let A: Vec<Vec<i32>> = (0..100).map(|_| (0..100).map(|_| rng.gen_range(1..=10)).collect()).collect();
     let B: Vec<Vec<i32>> = (0..100).map(|_| (0..100).map(|_| rng.gen_range(1..=10)).collect()).collect();
 
-    let result = multiply_matrices(&A, &B).unwrap();
+    // Medir tiempo de ejecución
+    let start_time = Instant::now();
+    let _result = multiply_matrices(&A, &B).unwrap();
+    let duration = start_time.elapsed();
+
+    // Convertir duración a milisegundos
+    let execution_time_ms = duration.as_millis();
+
+    // Crear carpeta /output y escribir el archivo execution_time.txt
+    let output_dir = "/output";
+    fs::create_dir_all(output_dir).unwrap();
+    let output_file = format!("{}/execution_time_rust.txt", output_dir);
+    fs::write(output_file, format!("Tiempo de ejecución: {} ms\n", execution_time_ms)).unwrap();
 }

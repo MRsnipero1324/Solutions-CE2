@@ -1,3 +1,6 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Random;
 
 public class MatrixMultiplication {
@@ -33,6 +36,24 @@ public class MatrixMultiplication {
             }
         }
 
+        // Medir tiempo de ejecución
+        long startTime = System.currentTimeMillis();
         int[][] result = multiplyMatrices(A, B);
+        long endTime = System.currentTimeMillis();
+
+        long executionTime = endTime - startTime; // Tiempo en milisegundos
+
+        // Crear carpeta /output y escribir archivo execution_time.txt
+        File outputDir = new File("/output");
+        if (!outputDir.exists()) {
+            outputDir.mkdirs();
+        }
+
+        File outputFile = new File(outputDir, "execution_time_java.txt");
+        try (FileWriter writer = new FileWriter(outputFile)) {
+            writer.write("Tiempo de ejecución: " + executionTime + " ms\n");
+        } catch (IOException e) {
+            System.err.println("Error escribiendo el archivo: " + e.getMessage());
+        }
     }
 }
