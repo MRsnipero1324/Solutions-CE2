@@ -3,6 +3,6 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-COPY ../python/Script.py /app/
+COPY ../Python/Script.py /app/
 
 CMD ["python", "script.py"]

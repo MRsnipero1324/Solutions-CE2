@@ -28,7 +28,7 @@ El código de cada lenguaje se encuentra en su respectiva carpeta:
 │   ├── Script.go
 ├── rust/
 │   ├── Script.rs
-├── Dockerfiles/
+├── DockerFiles/
 │   ├── Dockerfile.python
 │   ├── Dockerfile.java
 │   ├── Dockerfile.cpp
@@ -41,41 +41,41 @@ El código de cada lenguaje se encuentra en su respectiva carpeta:
 
 ## Cómo Ejecutar los Programas con Docker
 
-Para cada lenguaje hay un `Dockerfile` en la carpeta `Dockerfiles/`. Sigue los siguientes pasos para ejecutar cada versión en su propio contenedor.
+Para cada lenguaje hay un `Dockerfile` en la carpeta `DockerFiles/`. Sigue los siguientes pasos para ejecutar cada versión en su propio contenedor.
 
 ### Python
 ```bash
-docker build -t matrix_python -f Dockerfiles/Dockerfile.python .
+docker build -t matrix_python -f DockerFiles/Dockerfile.Python .
 docker run --rm matrix_python
 ```
 
 ### Java
 ```bash
-docker build -t matrix_java -f Dockerfiles/Dockerfile.java .
+docker build -t matrix_java -f DockerFiles/Dockerfile.Java .
 docker run --rm matrix_java
 ```
 
 ### C++
 ```bash
-docker build -t matrix_cpp -f Dockerfiles/Dockerfile.cpp .
+docker build -t matrix_cpp -f DockerFiles/Dockerfile.cpp .
 docker run --rm matrix_cpp
 ```
 
 ### JavaScript (Node.js)
 ```bash
-docker build -t matrix_js -f Dockerfiles/Dockerfile.javascript .
+docker build -t matrix_js -f DockerFiles/Dockerfile.javascript .
 docker run --rm matrix_js
 ```
 
 ### Go
 ```bash
-docker build -t matrix_go -f Dockerfiles/Dockerfile.go .
+docker build -t matrix_go -f DockerFiles/Dockerfile.go .
 docker run --rm matrix_go
 ```
 
 ### Rust
 ```bash
-docker build -t matrix_rust -f Dockerfiles/Dockerfile.rust .
+docker build -t matrix_rust -f DockerFiles/Dockerfile.rust .
 docker run --rm matrix_rust
 ```
 
