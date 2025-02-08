@@ -3,8 +3,8 @@ FROM openjdk:17-alpine
 
 WORKDIR /app
 
-COPY ../Java/Script.Java /app/
+COPY ../Java/Script.java /app/
 
-RUN javac Script.Java
+RUN javac Script.java
 
 CMD ["java", "Script"]
