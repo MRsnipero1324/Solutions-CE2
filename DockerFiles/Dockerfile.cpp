@@ -1,5 +1,5 @@
 # Dockerfile para C++
-FROM gcc:12
+FROM gcc:12-alpine
 
 WORKDIR /app
 

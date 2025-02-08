@@ -46,37 +46,38 @@ Para cada lenguaje hay un `Dockerfile` en la carpeta `DockerFiles/`. Sigue los s
 ### Python
 ```bash
 docker build -t matrix_python -f DockerFiles/Dockerfile.Python .
-docker run --rm matrix_python
+docker run --rm -v $(pwd):/output matrix_python
+
 ```
 
 ### Java
 ```bash
 docker build -t matrix_java -f DockerFiles/Dockerfile.Java .
-docker run --rm matrix_java
+docker run --rm -v $(pwd):/output matrix_java
 ```
 
 ### C++
 ```bash
 docker build -t matrix_cpp -f DockerFiles/Dockerfile.cpp .
-docker run --rm matrix_cpp
+docker run --rm -v $(pwd):/output matrix_cpp
 ```
 
 ### JavaScript (Node.js)
 ```bash
 docker build -t matrix_js -f DockerFiles/Dockerfile.javascript .
-docker run --rm matrix_js
+docker run --rm -v $(pwd):/output matrix_js
 ```
 
 ### Go
 ```bash
 docker build -t matrix_go -f DockerFiles/Dockerfile.go .
-docker run --rm matrix_go
+docker run --rm -v $(pwd):/output matrix_go
 ```
 
 ### Rust
 ```bash
 docker build -t matrix_rust -f DockerFiles/Dockerfile.rust .
-docker run --rm matrix_rust
+docker run --rm -v $(pwd):/output matrix_rust
 ```
 
 ## Requisitos

@@ -1,5 +1,5 @@
 # Dockerfile para Java
-FROM openjdk:17-slim
+FROM openjdk:17-alpine
 
 WORKDIR /app
 
