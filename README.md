@@ -50,7 +50,7 @@ docker run --rm -v $(pwd):/output matrix_python
 
 ```
 
-### Java (Aun no funciona)
+### Java (Not Working)
 ```bash
 docker build -t matrix_java -f DockerFiles/Dockerfile.Java .
 docker run --rm -v $(pwd):/output matrix_java
@@ -74,7 +74,7 @@ docker build -t matrix_go -f DockerFiles/Dockerfile.go .
 docker run --rm -v $(pwd):/output matrix_go
 ```
 
-### Rust
+### Rust (Ready)
 ```bash
 docker build -t matrix_rust -f DockerFiles/Dockerfile.rust .
 docker run --rm -v $(pwd):/output matrix_rust
