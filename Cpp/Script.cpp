@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <cstdlib>
+#include <fstream>
+#include <chrono> // Para medir el tiempo de ejecución
 
 using namespace std;
 
@@ -35,5 +37,23 @@ int main() {
         }
     }
 
+    // Medir tiempo de ejecución
+    auto start = chrono::high_resolution_clock::now();
     vector<vector<int>> result = multiplyMatrices(A, B);
+    auto end = chrono::high_resolution_clock::now();
+
+    // Calcular duración en milisegundos
+    auto duration = chrono::duration_cast<chrono::milliseconds>(end - start).count();
+
+    // Crear carpeta output y guardar el tiempo en un archivo
+    ofstream outFile("output/execution_time_cpp.txt");
+    if (outFile.is_open()) {
+        outFile << "Tiempo de ejecución: " << duration << " ms" << endl;
+        outFile.close();
+    } else {
+        cerr << "No se pudo abrir el archivo para guardar el tiempo de ejecución" << endl;
+    }
+
+    return 0;
 }
+
