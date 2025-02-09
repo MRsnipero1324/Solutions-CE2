@@ -77,7 +77,7 @@ docker run --rm -v $(pwd):/output matrix_go
 ### Rust (Ready)
 ```bash
 docker build -t matrix_rust -f DockerFiles/Dockerfile.rust .
-docker run --rm -v $(pwd):/output matrix_rust
+docker run --rm -v $(pwd):/app/output matrix_rust
 ```
 
 ## Requisitos
