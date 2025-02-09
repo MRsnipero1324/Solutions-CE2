@@ -35,7 +35,7 @@ fn main() {
     // Crear carpeta de salida y guardar tiempo en un archivo
     std::fs::create_dir_all("output").unwrap();
     std::fs::write(
-        "output/execution_time.txt",
+        "output/execution_time_rust.txt",
         format!("Tiempo de ejecución: {:?} ms", duration.as_millis()),
     )
     .unwrap();
