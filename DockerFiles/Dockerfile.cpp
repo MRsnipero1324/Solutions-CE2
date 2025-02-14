@@ -1,4 +1,4 @@
-# Dockerfile para C++
+
 FROM gcc:12
 
 WORKDIR /app

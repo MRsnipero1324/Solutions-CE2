@@ -33,7 +33,6 @@ func multiplyMatrices(A, B [][]int) ([][]int, error) {
 }
 
 func main() {
-	// Semilla para el generador de números aleatorios
 	rand.Seed(time.Now().UnixNano())
 
 	// Crear matrices 100x100

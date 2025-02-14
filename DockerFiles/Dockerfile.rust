@@ -1,25 +1,17 @@
-# Base de Rust con cargo
 FROM rust:latest
 
-# Crear directorio de trabajo
 WORKDIR /app
 
-# Copiar el archivo fuente
 COPY ./Rust/Script.rs .
 
-# Inicializar proyecto Cargo para gestionar dependencias
 RUN cargo init --bin
 
-# Copiar el código fuente a main.rs
 RUN mv Script.rs src/main.rs
 
-# Declarar la dependencia `rand` en Cargo.toml
 RUN echo 'rand = "0.8"' >> Cargo.toml
 
-# Crear carpeta output para almacenar resultados
 RUN mkdir -p output
 
-# Compilar el programa
 RUN cargo build --release
 
 # Ejecutar el programa

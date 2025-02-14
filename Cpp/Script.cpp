@@ -2,7 +2,7 @@
 #include <vector>
 #include <cstdlib>
 #include <fstream>
-#include <chrono> // Para medir el tiempo de ejecución
+#include <chrono>
 
 using namespace std;
 
@@ -42,7 +42,6 @@ int main() {
     vector<vector<int>> result = multiplyMatrices(A, B);
     auto end = chrono::high_resolution_clock::now();
 
-    // Calcular duración en milisegundos
     auto duration = chrono::duration_cast<chrono::milliseconds>(end - start).count();
 
     // Crear carpeta output y guardar el tiempo en un archivo

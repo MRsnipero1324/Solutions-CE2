@@ -29,9 +29,7 @@ let B = Array.from({ length: 100 }, () => Array.from({ length: 100 }, () => Math
 const startTime = Date.now();
 let result = multiplyMatrices(A, B);
 const endTime = Date.now();
-const executionTime = endTime - startTime; // Tiempo en milisegundos
-
-// Crear carpeta /output y escribir el archivo execution_time.txt
+const executionTime = endTime - startTime; 
 const outputDir = "/output";
 if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir, { recursive: true });
