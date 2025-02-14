@@ -3,7 +3,6 @@
 Este repositorio contiene implementaciones de un algoritmo de multiplicación de matrices en los siguientes lenguajes de programación:
 
 - Python
-- Java
 - C++
 - JavaScript
 - Go
@@ -18,8 +17,6 @@ El código de cada lenguaje se encuentra en su respectiva carpeta:
 ```
 ├── python/
 │   ├── Script.py
-├── java/
-│   ├── Script.java
 ├── cpp/
 │   ├── Script.cpp
 ├── javascript/
@@ -30,7 +27,6 @@ El código de cada lenguaje se encuentra en su respectiva carpeta:
 │   ├── Script.rs
 ├── DockerFiles/
 │   ├── Dockerfile.python
-│   ├── Dockerfile.java
 │   ├── Dockerfile.cpp
 │   ├── Dockerfile.javascript
 │   ├── Dockerfile.go
@@ -47,6 +43,7 @@ Para cada lenguaje hay un `Dockerfile` en la carpeta `DockerFiles/`. Sigue los s
 ```bash
 docker build -t matrix_python -f DockerFiles/Dockerfile.Python .
 docker run --rm -v $(pwd)/output:/output matrix_python
+```
 
 ### C++ (Ready)
 ```bash
@@ -71,11 +68,3 @@ docker run --rm -v $(pwd)/output:/output matrix_go
 docker build -t matrix_rust -f DockerFiles/Dockerfile.rust .
 docker run --rm -v $(pwd)/output:/app/output matrix_rust
 ```
-
-## Requisitos
-- Tener instalado Docker.
-- Clonar este repositorio:
-  ```bash
-  git clone https://github.com/tu-usuario/multiplicacion-matrices.git
-  cd multiplicacion-matrices
-  ```
